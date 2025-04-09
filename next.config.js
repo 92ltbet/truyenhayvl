@@ -44,17 +44,13 @@ const nextConfig = {
         minimize: true,
         splitChunks: {
           chunks: 'all',
-          maxInitialRequests: Infinity,
-          minSize: 0,
+          maxInitialRequests: 20,
+          minSize: 20000,
           cacheGroups: {
             vendor: {
               test: /[\\/]node_modules[\\/]/,
-              name(module) {
-                // Lấy tên package từ node_modules
-                const packageName = module.context.match(/[\\/]node_modules[\\/]([^\\/]+)/)[1];
-                // Tạo tên file nhỏ hơn
-                return `npm.${packageName.replace('@', '')}`;
-              },
+              name: 'vendor',
+              chunks: 'all',
             },
           },
         },
@@ -64,7 +60,6 @@ const nextConfig = {
     return config;
   },
   // Tối ưu hóa output
-  output: 'export',
   // Tắt tính năng tạo trang tĩnh cho các trang động
   staticPageGenerationTimeout: 120,
   distDir: '.next-cf'
