@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import { getComics } from '@/lib/api';
 
 export const runtime = 'edge';
-export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
@@ -15,4 +14,4 @@ export async function GET() {
       { status: 500 }
     );
   }
-} 
+}

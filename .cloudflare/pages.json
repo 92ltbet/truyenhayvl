@@ -1,6 +1,6 @@
 {
-  "buildCommand": "npm run build:static",
-  "outputDirectory": "out",
+  "buildCommand": "npm run build:cloudflare",
+  "outputDirectory": ".next",
   "compatibility": {
     "node": "18"
   }
