@@ -25,22 +25,13 @@ const nextConfig = {
   },
   // Tắt source maps trong production để giảm kích thước
   productionBrowserSourceMaps: false,
-  // Cấu hình cho Cloudflare Pages
-  trailingSlash: true,
   // Tối ưu hóa cho Cloudflare Pages
   swcMinify: true,
+  // Tắt tính năng tạo trang tĩnh
+  output: 'standalone',
   // Cấu hình runtime cho API routes
   experimental: {
     serverComponentsExternalPackages: ['react', 'react-dom']
-  },
-  // Giảm kích thước bundle
-  webpack: (config, { dev, isServer }) => {
-    // Chỉ áp dụng cho production build
-    if (!dev && isServer) {
-      // Loại bỏ một số thư viện lớn khỏi server bundle
-      config.externals = [...config.externals, 'react', 'react-dom'];
-    }
-    return config;
   }
 };
 
