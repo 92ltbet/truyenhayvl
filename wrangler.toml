@@ -2,11 +2,22 @@ name = "v1-dig"
 main = "functions/_worker.js"
 compatibility_date = "2024-04-09"
 
+[triggers]
+crons = []
+
 [build]
 command = "npm run build:cloudflare"
 
 [site]
 bucket = ".next-cf"
+include = ["_next/**/*", "public/**/*", "*.html"]
+
+[env.production]
+workers_dev = false
+route = { pattern = "vencomic.com/*", zone_name = "vencomic.com" }
+
+[miniflare]
+kv_persist = true
 
 # Cấu hình cho Cloudflare Pages
 pages_build_output_dir = ".next-cf"
