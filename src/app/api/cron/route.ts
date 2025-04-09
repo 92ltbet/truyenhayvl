@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import { getHome } from '@/lib/api';
 
 export const runtime = 'edge';
-export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
@@ -13,4 +12,4 @@ export async function GET() {
     console.error('Cron job failed:', error);
     return NextResponse.json({ success: false, error: String(error) }, { status: 500 });
   }
-} 
+}
