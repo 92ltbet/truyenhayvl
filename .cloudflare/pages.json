@@ -1,14 +1,10 @@
 {
   "buildCommand": "npm run build:cloudflare",
-  "outputDirectory": ".next",
+  "outputDirectory": ".next/standalone",
   "compatibility": {
     "node": "18"
   },
   "nodejsCompatibility": {
     "enabled": true
-  },
-  "routes": [
-    { "pattern": "/api/*", "script": "functions/api/[[path]].js" },
-    { "pattern": "/*", "serve": "/.next" }
-  ]
+  }
 }

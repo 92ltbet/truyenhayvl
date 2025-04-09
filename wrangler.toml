@@ -1,6 +1,9 @@
+name = "v1-dig"
+main = "functions/api/[[path]].js"
+compatibility_date = "2023-10-30"
+
 [build]
 command = "npm run build:cloudflare"
-output_directory = ".next"
 
 [site]
 bucket = ".next"
@@ -13,3 +16,7 @@ routes = [
   { pattern = "/api/*", script = "functions/api/[[path]].js" },
   { pattern = "/*", serve = "/.next" }
 ]
+
+# Cấu hình cho Cloudflare Pages
+[pages_build_output_dir]
+value = ".next"
