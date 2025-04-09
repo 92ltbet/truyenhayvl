@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "build:cloudflare": "next build && wrangler deploy",
+    "build": "rm -rf .next .next-cf && next build",
+    "build:cloudflare": "rm -rf .next .next-cf && next build && wrangler deploy",
     "start": "next start",
     "lint": "next lint",
     "fetch-comics": "ts-node scripts/fetch-comics.ts",

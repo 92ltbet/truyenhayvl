@@ -11,7 +11,11 @@
 
 # next.js
 /.next/
+/.next-cf/
 /out/
+/build
+.next
+.next-cf
 
 # production
 /build
@@ -33,4 +37,16 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts 
+next-env.d.ts
+
+# cache
+.swc/
+.turbo
+
+# Cloudflare
+.wrangler/
+.cloudflare/
+functions/_worker.js
+
+# webpack
+.webpack/ 
