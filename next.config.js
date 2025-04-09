@@ -27,8 +27,6 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   // Tối ưu hóa cho Cloudflare Pages
   swcMinify: true,
-  // Tắt tính năng tạo trang tĩnh
-  output: 'standalone',
   // Cấu hình runtime cho API routes
   experimental: {
     serverComponentsExternalPackages: ['react', 'react-dom']
