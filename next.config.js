@@ -29,6 +29,10 @@ const nextConfig = {
   trailingSlash: true,
   // Tối ưu hóa cho Cloudflare Pages
   swcMinify: true,
+  // Cấu hình runtime cho API routes
+  experimental: {
+    serverComponentsExternalPackages: ['react', 'react-dom']
+  },
   // Giảm kích thước bundle
   webpack: (config, { dev, isServer }) => {
     // Chỉ áp dụng cho production build

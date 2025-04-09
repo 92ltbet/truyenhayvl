@@ -3,5 +3,8 @@
   "outputDirectory": ".next",
   "compatibility": {
     "node": "18"
+  },
+  "nodejsCompatibility": {
+    "enabled": true
   }
 }
