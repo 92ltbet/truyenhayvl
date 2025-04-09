@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:cloudflare": "next build && mkdir -p .next/standalone && cp -r .next/static .next/standalone/ && cp -r public .next/standalone/ && cp -r .next/server .next/standalone/",
+    "build:cloudflare": "next build",
     "start": "next start",
     "lint": "next lint",
     "fetch-comics": "ts-node scripts/fetch-comics.ts",
