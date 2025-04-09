@@ -6,5 +6,9 @@
   },
   "nodejsCompatibility": {
     "enabled": true
-  }
+  },
+  "routes": [
+    { "pattern": "/api/*", "script": "functions/api/[[path]].js" },
+    { "pattern": "/*", "serve": "/.next" }
+  ]
 }
