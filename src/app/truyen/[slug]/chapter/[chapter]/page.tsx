@@ -12,6 +12,7 @@ interface ChapterPageProps {
     slug: string;
     chapter: string;
   };
+  searchParams?: Record<string, string | string[]>;
 }
 
 interface ChapterImage {

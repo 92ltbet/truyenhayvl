@@ -25,12 +25,6 @@ const nextConfig = {
   },
   // Tắt source maps trong production để giảm kích thước
   productionBrowserSourceMaps: false,
-  // Tối ưu hóa cho Cloudflare Pages
-  swcMinify: true,
-  // Cấu hình runtime cho API routes
-  experimental: {
-    serverComponentsExternalPackages: ['react', 'react-dom']
-  },
   // Tối ưu hóa kích thước bundle
   webpack: (config, { dev, isServer }) => {
     // Chỉ áp dụng cho production build

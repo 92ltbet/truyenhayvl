@@ -3,7 +3,14 @@ import ComicCard from '@/components/ComicCard';
 import { Suspense } from 'react';
 import LoadingSection from '@/components/LoadingSection';
 
-export default async function GenrePage({ params }: { params: { slug: string } }) {
+interface GenrePageProps {
+  params: {
+    slug: string;
+  };
+  searchParams?: Record<string, string | string[]>;
+}
+
+export default async function GenrePage({ params }: GenrePageProps) {
   const { data } = await getComicsByCategory(params.slug);
   
   return (

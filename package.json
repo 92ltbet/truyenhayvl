@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:cloudflare": "echo 'Skipping Next.js build for Cloudflare Pages'",
+    "build:cloudflare": "next build && wrangler deploy",
     "start": "next start",
     "lint": "next lint",
     "fetch-comics": "ts-node scripts/fetch-comics.ts",
