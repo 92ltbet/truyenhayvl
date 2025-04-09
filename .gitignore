@@ -12,16 +12,6 @@
 # next.js
 /.next/
 /out/
-.next/
-.next/standalone/
-.next/static/
-.next/cache/
-
-# webpack cache
-/cache/
-/.cache/
-**/.cache/
-**/*.pack
 
 # production
 /build
@@ -43,10 +33,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
-
-# cloudflare
-.wrangler/
-
-# vscode
-.vscode/ 
+next-env.d.ts 

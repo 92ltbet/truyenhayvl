@@ -1,7 +1,7 @@
 import ComicImage from '@/components/ComicImage';
 import { getImageUrl } from '@/lib/imageUtils';
 import { cookies } from 'next/headers';
-import { getComicDetail, getComics } from '@/lib/api';
+import { getComicDetail } from '@/lib/api';
 import FollowButton from '@/components/FollowButton';
 import Link from 'next/link';
 import SortButton from '@/components/SortButton';
@@ -11,17 +11,6 @@ interface ComicPageProps {
   params: {
     slug: string;
   };
-}
-
-// Thêm hàm generateStaticParams để hỗ trợ static export
-export async function generateStaticParams() {
-  // Lấy danh sách truyện từ API
-  const { data } = await getComics(1);
-  
-  // Giới hạn số lượng trang để tránh quá nhiều
-  return data.items.slice(0, 20).map((comic: any) => ({
-    slug: comic.slug,
-  }));
 }
 
 // Form action cho theo dõi truyện

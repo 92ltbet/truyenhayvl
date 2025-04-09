@@ -1,20 +1,7 @@
-import { getComicsByCategory, getCategories } from '@/lib/api';
+import { getComicsByCategory } from '@/lib/api';
 import ComicCard from '@/components/ComicCard';
 import { Suspense } from 'react';
 import LoadingSection from '@/components/LoadingSection';
-
-// Thêm hàm generateStaticParams để hỗ trợ static export
-export async function generateStaticParams() {
-  try {
-    const { data } = await getCategories();
-    return data.items.map((category: any) => ({
-      slug: category.slug,
-    }));
-  } catch (error) {
-    console.error('Error generating static params for category pages:', error);
-    return [];
-  }
-}
 
 export default async function GenrePage({ params }: { params: { slug: string } }) {
   const { data } = await getComicsByCategory(params.slug);
