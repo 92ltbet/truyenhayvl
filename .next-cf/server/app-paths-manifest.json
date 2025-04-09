@@ -3,15 +3,15 @@
   "/admin/page": "app/admin/page.js",
   "/api/follow/route": "app/api/follow/route.js",
   "/api/genres/route": "app/api/genres/route.js",
-  "/comic/[slug]/page": "app/comic/[slug]/page.js",
   "/api/history/route": "app/api/history/route.js",
   "/comic/[slug]/chapter/[chapter]/page": "app/comic/[slug]/chapter/[chapter]/page.js",
   "/page": "app/page.js",
+  "/comic/[slug]/page": "app/comic/[slug]/page.js",
   "/the-loai/page": "app/the-loai/page.js",
   "/the-loai/[slug]/page": "app/the-loai/[slug]/page.js",
   "/theo-doi/page": "app/theo-doi/page.js",
-  "/api/cron/route": "app/api/cron/route.js",
   "/api/comics/route": "app/api/comics/route.js",
+  "/api/cron/route": "app/api/cron/route.js",
   "/truyen/[slug]/chapter/[chapter]/page": "app/truyen/[slug]/chapter/[chapter]/page.js",
   "/truyen/[slug]/page": "app/truyen/[slug]/page.js"
 }

@@ -23,15 +23,6 @@
       "static/chunks/main-app-75e19a606d6ee670.js",
       "static/chunks/app/admin/page-2597e64413b713a6.js"
     ],
-    "/comic/[slug]/page": [
-      "static/chunks/webpack-c4d57e20bb8176d1.js",
-      "static/chunks/fd9d1056-10ecc13cca5abecf.js",
-      "static/chunks/472-183bc7ebeac03d02.js",
-      "static/chunks/main-app-75e19a606d6ee670.js",
-      "static/chunks/699-0813ee377f714513.js",
-      "static/chunks/413-96062ad4cf82c791.js",
-      "static/chunks/app/comic/[slug]/page-b9a17260d88700f1.js"
-    ],
     "/comic/[slug]/chapter/[chapter]/page": [
       "static/chunks/webpack-c4d57e20bb8176d1.js",
       "static/chunks/fd9d1056-10ecc13cca5abecf.js",
@@ -52,6 +43,15 @@
       "static/chunks/413-96062ad4cf82c791.js",
       "static/chunks/404-5bf1c4a07519c733.js",
       "static/chunks/app/page-f07ff09885c8ac96.js"
+    ],
+    "/comic/[slug]/page": [
+      "static/chunks/webpack-c4d57e20bb8176d1.js",
+      "static/chunks/fd9d1056-10ecc13cca5abecf.js",
+      "static/chunks/472-183bc7ebeac03d02.js",
+      "static/chunks/main-app-75e19a606d6ee670.js",
+      "static/chunks/699-0813ee377f714513.js",
+      "static/chunks/413-96062ad4cf82c791.js",
+      "static/chunks/app/comic/[slug]/page-b9a17260d88700f1.js"
     ],
     "/the-loai/page": [
       "static/chunks/webpack-c4d57e20bb8176d1.js",
