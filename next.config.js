@@ -21,7 +21,20 @@ const nextConfig = {
         pathname: '/**',
       }
     ]
-  }
+  },
+  // Tối ưu hóa cho Cloudflare Pages
+  output: 'standalone',
+  // Giảm kích thước bundle
+  webpack: (config, { dev, isServer }) => {
+    // Chỉ áp dụng cho production build
+    if (!dev && isServer) {
+      // Loại bỏ một số thư viện lớn khỏi server bundle
+      config.externals = [...config.externals, 'react', 'react-dom'];
+    }
+    return config;
+  },
+  // Tắt source maps trong production để giảm kích thước
+  productionBrowserSourceMaps: false
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;

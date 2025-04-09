@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:cloudflare": "NEXT_RUNTIME=edge next build",
     "start": "next start",
     "lint": "next lint",
     "fetch-comics": "ts-node scripts/fetch-comics.ts",
