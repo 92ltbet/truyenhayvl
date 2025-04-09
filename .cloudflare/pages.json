@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm run build:static",
+  "outputDirectory": "out",
+  "compatibility": {
+    "node": "18"
+  }
+}

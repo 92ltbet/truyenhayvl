@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -22,19 +23,14 @@ const nextConfig = {
       }
     ]
   },
-  // Tối ưu hóa cho Cloudflare Pages
-  output: 'standalone',
-  // Giảm kích thước bundle
-  webpack: (config, { dev, isServer }) => {
-    // Chỉ áp dụng cho production build
-    if (!dev && isServer) {
-      // Loại bỏ một số thư viện lớn khỏi server bundle
-      config.externals = [...config.externals, 'react', 'react-dom'];
-    }
-    return config;
-  },
+  // Tạo bản build tĩnh cho Cloudflare Pages
+  output: 'export',
   // Tắt source maps trong production để giảm kích thước
-  productionBrowserSourceMaps: false
+  productionBrowserSourceMaps: false,
+  // Cấu hình cho static export
+  trailingSlash: true,
+  // Bỏ qua các lỗi liên quan đến API routes trong static export
+  distDir: 'out'
 };
 
 module.exports = nextConfig;
