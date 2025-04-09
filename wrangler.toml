@@ -6,7 +6,7 @@ compatibility_date = "2023-10-30"
 command = "npm run build:cloudflare"
 
 [site]
-bucket = ".next"
+bucket = ".next/standalone"
 
 # Cấu hình cho Cloudflare Pages
-pages_build_output_dir = ".next"
+pages_build_output_dir = ".next/standalone"
