@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build:cloudflare",
-  "outputDirectory": "public",
+  "outputDirectory": ".next-cf",
   "compatibility": {
     "node": "18"
   },

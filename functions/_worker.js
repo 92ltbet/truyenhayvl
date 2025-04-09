@@ -7,13 +7,18 @@ export default {
       return await handleApiRequest(request, env, ctx);
     }
 
-    // Nếu là request đến file tĩnh, chuyển tiếp đến thư mục static
-    if (url.pathname.startsWith('/_next/')) {
-      return await fetch(request);
+    // Nếu là request đến trang chủ và không có path
+    if (url.pathname === '/' || url.pathname === '') {
+      return Response.redirect(`${url.origin}/comics`, 302);
     }
 
-    // Nếu là request đến trang chủ hoặc các trang khác, chuyển tiếp đến file index.html
-    return await fetch(request);
+    // Xử lý các request khác
+    try {
+      return await env.ASSETS.fetch(request);
+    } catch (e) {
+      // Nếu không tìm thấy file, chuyển hướng đến trang comics
+      return Response.redirect(`${url.origin}/comics`, 302);
+    }
   }
 };
 
