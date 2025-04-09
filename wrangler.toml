@@ -6,4 +6,10 @@ output_directory = ".next"
 bucket = ".next"
 
 [build.upload]
-format = "service-worker"
+format = "directory"
+
+[env.production]
+routes = [
+  { pattern = "/api/*", script = "functions/api/[[path]].js" },
+  { pattern = "/*", serve = "/.next" }
+]
