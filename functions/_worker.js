@@ -7,17 +7,14 @@ export default {
       return await handleApiRequest(request, env, ctx);
     }
 
-    // Nếu là request đến trang chủ và không có path
-    if (url.pathname === '/' || url.pathname === '') {
-      return Response.redirect(`${url.origin}/comics`, 302);
-    }
-
-    // Xử lý các request khác
+    // Nếu là request đến trang chủ hoặc bất kỳ trang nào khác, trả về trang index.html
     try {
-      return await env.ASSETS.fetch(request);
+      // Thử lấy file từ thư mục public
+      const response = await env.ASSETS.fetch(new Request(new URL('/index.html', url.origin)));
+      return response;
     } catch (e) {
-      // Nếu không tìm thấy file, chuyển hướng đến trang comics
-      return Response.redirect(`${url.origin}/comics`, 302);
+      // Nếu không tìm thấy file, trả về trang lỗi 404
+      return new Response('Page not found', { status: 404 });
     }
   }
 };

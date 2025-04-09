@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:cloudflare": "rm -rf .next-cf && next build && cp -r public/* .next-cf/",
+    "build:cloudflare": "echo 'Skipping Next.js build for Cloudflare Pages'",
     "start": "next start",
     "lint": "next lint",
     "fetch-comics": "ts-node scripts/fetch-comics.ts",
