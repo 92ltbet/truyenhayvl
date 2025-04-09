@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build:cloudflare",
-  "outputDirectory": ".next/standalone",
+  "outputDirectory": ".next",
   "compatibility": {
     "node": "18"
   },

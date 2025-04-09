@@ -8,15 +8,5 @@ command = "npm run build:cloudflare"
 [site]
 bucket = ".next"
 
-[build.upload]
-format = "directory"
-
-[env.production]
-routes = [
-  { pattern = "/api/*", script = "functions/api/[[path]].js" },
-  { pattern = "/*", serve = "/.next" }
-]
-
 # Cấu hình cho Cloudflare Pages
-[pages_build_output_dir]
-value = ".next"
+pages_build_output_dir = ".next"
