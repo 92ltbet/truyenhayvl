@@ -1,1 +1,1 @@
-self.__RSC_SERVER_MANIFEST="{\"node\":{\"af9b01662867c3f9b3c66cb5fc43467f64474a3f\":{\"workers\":{\"app/truyen/[slug]/page\":2869},\"layer\":{\"app/truyen/[slug]/page\":\"rsc\"}}},\"edge\":{},\"encryptionKey\":\"8bai9mkz2++uN2YDTLsD/4qK1WA+RvVIFSGkoqyHspU=\"}"
+self.__RSC_SERVER_MANIFEST="{\"node\":{\"af9b01662867c3f9b3c66cb5fc43467f64474a3f\":{\"workers\":{\"app/truyen/[slug]/page\":2869},\"layer\":{\"app/truyen/[slug]/page\":\"rsc\"}}},\"edge\":{},\"encryptionKey\":\"Ubh+dwjKh5gB7JcUi2rjoq0uy1kS1I7v0hr1sDWgpCQ=\"}"
