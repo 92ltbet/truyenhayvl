@@ -40,6 +40,10 @@ const nextConfig = {
   //
   //   return config;
   // },
+  experimental: {
+    // Thử bỏ qua node_modules một cách tường minh khi tracing
+    outputFileTracingIgnores: ['**node_modules/**'],
+  },
   // Cấu hình để tối ưu cho Cloudflare Workers
   trailingSlash: false,
   generateEtags: true,
