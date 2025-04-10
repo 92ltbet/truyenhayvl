@@ -28,18 +28,18 @@ const nextConfig = {
   // Cấu hình output cho Cloudflare
   // output: 'standalone',
   // Tối ưu hóa kích thước bundle
-  webpack: (config, { dev, isServer }) => {
-    // Chỉ áp dụng cho production build
-    if (!dev) {
-      // Tối ưu hóa kích thước các chunk
-      config.optimization = {
-        ...config.optimization,
-        minimize: true,
-      };
-    }
-
-    return config;
-  },
+  // webpack: (config, { dev, isServer }) => { // Tạm thời bình luận
+  //   // Chỉ áp dụng cho production build
+  //   if (!dev) {
+  //     // Tối ưu hóa kích thước các chunk
+  //     config.optimization = {
+  //       ...config.optimization,
+  //       minimize: true,
+  //     };
+  //   }
+  //
+  //   return config;
+  // },
   // Cấu hình để tối ưu cho Cloudflare Workers
   trailingSlash: false,
   generateEtags: true,
