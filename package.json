@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "cross-env NODE_ENV=production next build && npx @cloudflare/next-on-pages",
     "build:cloudflare": "cross-env NODE_ENV=production next build && npx @cloudflare/next-on-pages",
-    "deploy": "wrangler deploy",
     "start": "next start",
     "lint": "next lint",
     "fetch-comics": "ts-node scripts/fetch-comics.ts",

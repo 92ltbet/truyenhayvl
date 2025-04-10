@@ -26,7 +26,7 @@ const nextConfig = {
   // Tắt source maps trong production để giảm kích thước
   productionBrowserSourceMaps: false,
   // Cấu hình output cho Cloudflare
-  output: 'standalone',
+  // output: 'standalone',
   // Tối ưu hóa kích thước bundle
   webpack: (config, { dev, isServer }) => {
     // Chỉ áp dụng cho production build
