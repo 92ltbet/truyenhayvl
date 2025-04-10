@@ -40,8 +40,6 @@ const nextConfig = {
 
     return config;
   },
-  // Thư mục output
-  distDir: '.next-cf',
   // Cấu hình để tối ưu cho Cloudflare Workers
   trailingSlash: false,
   generateEtags: true,

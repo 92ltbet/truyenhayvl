@@ -25,6 +25,7 @@ async function readComicsData() {
     return comicsCache;
   } catch (error) {
     console.error('Error reading comics data:', error);
+    // Enhanced error handling
     throw new Error('Failed to fetch comics data from API');
   }
 }
@@ -130,6 +131,9 @@ export const searchComics = async (keyword: string) => {
   return response.data;
 };
 
+/**
+ * Get a list of similar comics
+ */
 export const getSimilarComics = async (comicId: string) => {
   try {
     const response = await fetch(

@@ -1,12 +1,12 @@
 import { Suspense } from 'react';
-import { getHome, getAllPages } from '@/lib/api';
-import Footer from '@/components/Footer';
-import ComicCard from '@/components/ComicCard';
-import ComicCarousel from '@/components/ComicCarousel';
-import ReadingHistory from '@/components/ReadingHistory';
-import { Comic } from '@/types/comic';
-import Image from 'next/image'
-import LoadingSection from '@/components/LoadingSection';
+import { getHome, getAllPages } from "../lib/api";
+import Footer from "../components/Footer";
+import ComicCard from "../components/ComicCard";
+import ComicCarousel from "../components/ComicCarousel";
+import ReadingHistory from "../components/ReadingHistory";
+import { Comic } from "../types/comic";
+import Image from 'next/image';
+import LoadingSection from "../components/LoadingSection";
 
 const categories = [
   { slug: 'manhua', name: 'Manhua' },

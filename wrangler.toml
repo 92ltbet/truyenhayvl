@@ -6,18 +6,27 @@ compatibility_date = "2024-04-09"
 crons = []
 
 [build]
-command = "npm run build:cloudflare"
+command = "npm run build"
 
-[site]
-bucket = ".next-cf"
-include = ["_next/**/*", "public/**/*", "*.html"]
+# Bỏ qua cấu hình site
+# [site]
+# bucket = ".next-cf"
+# # Thêm exclude patterns để bỏ qua thư mục cache
+# exclude = [
+#   "cache/**/*",
+#   "**/node_modules/**",
+#   "**/.git/**",
+#   "**/cache/webpack/**/*.pack",
+#   "**/cache/webpack/**/*.pack.gz"
+# ]
 
 [env.production]
-workers_dev = false
-route = { pattern = "vencomic.com/*", zone_name = "vencomic.com" }
+workers_dev = true
 
-[miniflare]
-kv_persist = true
+# Cấu hình cho Cloudflare Pages - Bỏ qua vì dùng next-on-pages
+# pages_build_output_dir = ".next-cf"
 
-# Cấu hình cho Cloudflare Pages
-pages_build_output_dir = ".next-cf"
+# Thêm bindings cho ASSETS - Bỏ qua vì dùng next-on-pages
+# [[bindings]]
+# name = "ASSETS"
+# type = "assets"

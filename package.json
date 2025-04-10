@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rimraf .next .next-cf && NODE_ENV=production next build",
-    "build:cloudflare": "rimraf .next .next-cf && cross-env NODE_ENV=production next build && wrangler deploy",
+    "build": "cross-env NODE_ENV=production next build && npx @cloudflare/next-on-pages",
+    "build:cloudflare": "cross-env NODE_ENV=production next build && npx @cloudflare/next-on-pages",
+    "deploy": "wrangler deploy",
     "start": "next start",
     "lint": "next lint",
     "fetch-comics": "ts-node scripts/fetch-comics.ts",
@@ -30,6 +31,7 @@
     "use-sync-external-store": "^1.5.0"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "1.13.12",
     "@types/node": "^20.17.30",
     "@types/react": "18.3.20",
     "@types/react-dom": "^18",
